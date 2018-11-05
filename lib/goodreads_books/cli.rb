@@ -1,11 +1,3 @@
-require 'nokogiri'
-require 'open-uri'
-require 'pry'
-
-require_relative '../goodreads_books/cli.rb'
-require_relative '../goodreads_books/book.rb'
-require_relative '../goodreads_books/scraper.rb'
-
 class CLI # This class runs the command-line interface for the gem
 
   def call

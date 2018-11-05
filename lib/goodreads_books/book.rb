@@ -1,11 +1,3 @@
-require 'nokogiri'
-require 'open-uri'
-require 'pry'
-
-require_relative '../goodreads_books/cli.rb'
-require_relative '../goodreads_books/book.rb'
-require_relative '../goodreads_books/scraper.rb'
-
 class Book # This class creates an object that stores information about a book
 
   attr_accessor :title, :authors, :profile_url, :summary
