@@ -43,15 +43,11 @@ class Scraper # This class scrapes information from www.goodreads.com
     # This method uses the profile_url information from a Book object to gather the book's summary from that book's webpage on
     # www.goodreads.com
 
-    profile_url = book.profile_url # The url information from the Book object
-
     # Opens the book's webpage using open-uri and collects the information using Nokogiri
-    html = open("https://www.goodreads.com#{profile_url}")
+    html = open("https://www.goodreads.com#{book.profile_url}")
     doc = Nokogiri::HTML(html)
 
-    summary = doc.css(".readable.stacked span").text # Gets the book's summary
-
-    book.summary = summary # Takes the summary information and adds it to the Book object
+    book.summary = doc.css(".readable.stacked span").text # Gets the book's summary information and adds it to the Book object
 
     book.summary # Returns the Book object's summary information
   end
