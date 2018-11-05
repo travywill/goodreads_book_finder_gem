@@ -36,7 +36,7 @@ class Scraper # This class scrapes information from www.goodreads.com
       books << book # Collects the Book object in the array
     end
 
-    return books # Returns the array of Book objects
+    books # Returns the array of Book objects
   end
 
   def scrape_book_profile_page(book)
@@ -53,6 +53,6 @@ class Scraper # This class scrapes information from www.goodreads.com
 
     book.summary = summary # Takes the summary information and adds it to the Book object
 
-    return book.summary # Returns the Book object's summary information
+    book.summary # Returns the Book object's summary information
   end
 end
