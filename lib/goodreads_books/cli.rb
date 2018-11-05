@@ -77,7 +77,7 @@ class CLI # This class runs the command-line interface for the gem
     end
     Scraper.scrape_book_profile_page(@book_list[input -1]) if @book_list[input -1].summary == nil # Gets the book's summary information
     puts ""
-    puts summary
+    puts @book_list[input -1].summary
     puts ""
     puts "Would you like to read a summary of another one of the books from your search results? (y/n)"
     input = gets.strip
