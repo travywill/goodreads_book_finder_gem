@@ -1,6 +1,6 @@
 class Scraper # This class scrapes information from www.goodreads.com
 
-  def scrape_search_results(query)
+  def self.scrape_search_results(query)
     # This method collects an array of Book objects based on information gathered from search results from www.goodreads.com
 
     books = [] # An array for collecting Book objects
@@ -39,7 +39,7 @@ class Scraper # This class scrapes information from www.goodreads.com
     books # Returns the array of Book objects
   end
 
-  def scrape_book_profile_page(book)
+  def self.scrape_book_profile_page(book)
     # This method uses the profile_url information from a Book object to gather the book's summary from that book's webpage on
     # www.goodreads.com
 
