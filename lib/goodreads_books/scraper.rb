@@ -1,11 +1,9 @@
 class Scraper # This class scrapes information from www.goodreads.com
 
-  def scrape_search_results(search_terms)
+  def scrape_search_results(query)
     # This method collects an array of Book objects based on information gathered from search results from www.goodreads.com
 
     books = [] # An array for collecting Book objects
-
-    query = search_terms # The user's search terms
 
     query.each_char do |letter| # Formats the search terms to be put in the search results url
       if letter == " "
