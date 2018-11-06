@@ -43,9 +43,8 @@ class CLI # This class runs the command-line interface for the gem
     end
   end
 
-  def list_books(search_terms)
+  def list_books(query)
     # This method prints a numbered list of books to the screen based on the user's search terms
-    query = search_terms # The user's search terms
     @book_list = Scraper.scrape_search_results(query) # Creates an array of Book objects based on user's search terms
     @book_list.each_with_index do |book, index| # Prints a numbered list of the Books to the screen
       if book.authors.length == 1 # Formatting for book with one author
