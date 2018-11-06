@@ -20,14 +20,13 @@ Or install it yourself as:
 
 ## Usage
 
-First, clone the repository from https://github.com/travywill/cli-data-gem-assessment-v-000 by typing this code into your Terminal or IDE:
+First, clone the repository from https://github.com/travywill/goodreads_book_finder_gem by typing this code into your Terminal or IDE:
 
-  git clone https://github.com/travywill/cli-data-gem-assessment-v-000
+  git clone https://github.com/travywill/goodreads_book_finder_gem
 
-Then make sure you change into the goodreads_books_gem directory following these steps of code:
+Then make sure you change into the goodreads_book_finder_gem directory by typing this code:
 
-  cd cli-data-gem-assessment-v-000
-  cd goodreads_books_gem
+  cd goodreads_book_finder_gem
 
 Make sure all the dependencies are installed by running this code:
 
