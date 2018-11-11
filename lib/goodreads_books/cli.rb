@@ -18,10 +18,10 @@ class CLI # This class runs the command-line interface for the gem
     list_books # Runs the list_books method to print a list of the books from the array to the screen
     puts ""
     puts "Would you like to read a summary of one of these books? (y/n)"
-    input = gets.strip
+    input = gets.strip.downcase
     until input == "y" || input == "n" # Makes sure the user enters valid input
       puts "Please answer with y or n: "
-      input = gets.strip
+      input = gets.strip.downcase
     end
     if input == "y" # Runs the show_summary method if the user indicated wanting to read a summary
       puts ""
@@ -29,10 +29,10 @@ class CLI # This class runs the command-line interface for the gem
     elsif input == "n" # Asks if the user would like to conduct another search if no summary is wanted
       puts ""
       puts "Would you like to conduct a new search? (y/n)"
-      input = gets.strip
+      input = gets.strip.downcase
       until input == "y" || input == "n" # Makes sure the user enters valid input
         puts "Please answer with y or n: "
-        input = gets.strip
+        input = gets.strip.downcase
       end
       if input == "y" # Begins a new search by re-running the menu method
         puts ""
@@ -85,10 +85,10 @@ class CLI # This class runs the command-line interface for the gem
     puts @book_list[input -1].summary # Prints the book's summary information to the screen
     puts ""
     puts "Would you like to read a summary of another one of the books from your search results? (y/n)"
-    input = gets.strip
+    input = gets.strip.downcase
     until input == "y" || input == "n" # Makes sure the user enters valid input
       puts "Please answer with y or n: "
-      input = gets.strip
+      input = gets.strip.downcase
     end
     if input == "y" # Reprints list of books if user wants to read another summary from that list
       puts ""
@@ -98,10 +98,10 @@ class CLI # This class runs the command-line interface for the gem
     elsif input == "n" # Allows user to conduct another search for books if no summary is wanted from the current list
       puts ""
       puts "Would you like to conduct a new search? (y/n)"
-      input = gets.strip
+      input = gets.strip.downcase
       until input == "y" || input == "n" # Makes sure the user enters valid input
         puts "Please answer with y or n: "
-        input = gets.strip
+        input = gets.strip.downcase
       end
       if input == "y" # Reruns the menu method if the user wants to conduct another search
         puts ""
