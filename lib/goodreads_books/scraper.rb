@@ -32,19 +32,9 @@ class Scraper # This class scrapes information from www.goodreads.com
       book_hash[:authors] = book_authors
       book_hash[:profile_url] = book_url
 
-      already_exists = false # Boolean to check if book already exists in Book class
-
-      Book.all.each do |book| # Iterates through items saved in Book class to see if book already exists in it
-        if book.profile_url == book_url # If the book profile url matches, it exists
-          already_exists = true
-          books << book # If it exists, add it to the array of books from search results
-        end
-      end
-
-      if already_exists == false # If book doesn't already exist in Book class, create a new Book object
-        book = Book.new(book_hash) # Creates a new Book object based on the information from the hash
-        books << book # Collects the Book object in the array
-      end
+      book = Book.all.find { |b| b.profile_url == book_url} # Iterates through items saved in Book class to see if book already exists in it
+      book = Book.new(book_hash) if book == nil # Creates a new Book object if book doesn't already exist in Book class
+      books << book # Collects the Book object in the array
     end
 
     books # Returns the array of Book objects
