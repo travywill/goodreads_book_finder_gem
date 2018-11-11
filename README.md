@@ -55,3 +55,10 @@ The gem is available as open source under the terms of the [MIT License](https:/
 ## Code of Conduct
 
 Everyone interacting in the GoodreadsBooksGem project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/'travywill'/goodreads_books_gem/blob/master/CODE_OF_CONDUCT.md).
+
+## Note
+
+This repository was originally created in a lesson file for my Flatiron School's first project, but I moved it to its own repository for
+better ease of use.  If you would like to see the original repository and the associated commits, go to this url:
+
+https://github.com/travywill/cli-data-gem-assessment-v-000
